@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso</title>
+</head>
+<body>
+    <h1>Leitor de pesos</h1>
+    <p>Nome: <span id="nome_p"></span></p>
+    <p>Peso: <span id="peso_p"></span></p>
+    <p>Nome: <span id="nome_s"></span></p>
+    <p>Peso: <span id="peso_s"></span></p>
+    <div id="resultado"></div>
+
+    <script>
+        let nome1 = prompt ("Digite o nome da primeira pessoa.");
+        let peso1 = Number (prompt("Digite o peso."));
+        let nome2 = prompt ("Digite o nome da segunda pessoa.");
+        let peso2 = Number (prompt("Digite o peso."));
+        let msg;
+
+        if (peso1 > peso2){
+            msg = "A primeira pessoa está com obesidade."
+        }else if (peso1 < peso2){
+            msg = "A segunda pessoa está com obesidade."
+        }else {
+            msg = "As duas pessoas estão acima do peso."
+        }
+           
+        
+        document.getElementById("nome_p").innerHTML=nome1
+        document.getElementById("peso_p").innerHTML=peso1;
+        document.getElementById("nome_s").innerHTML=nome2;
+        document.getElementById("peso_s").innerHTML=peso2;
+        document.getElementById("resultado").innerHTML=msg;
+
+    </script>
+    
+</body>
+</html>
